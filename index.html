@@ -1,125 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ayush | Portfolio</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #0f0f0f;
-            color: #ffffff;
             margin: 0;
-            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: #0e0e0e;
+            color: #f5f5f5;
         }
+
+        /* Header */
         header {
-            background: #1a1a1a;
-            padding: 25px;
+            background: linear-gradient(135deg, #00eaff, #0077ff);
+            padding: 50px 20px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
-            font-size: 32px;
-            color: #00eaff;
+            font-size: 42px;
+            font-weight: 700;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .project {
-            background: #1c1c1c;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #222;
-        }
-        .project h2 {
-            margin-top: 0;
-            color: #00eaff;
-        }
-        .code-box {
-            background: #111;
-            padding: 15px;
-            border-radius: 8px;
+
+        header p {
             margin-top: 10px;
-            overflow-x: auto;
-            font-family: "Courier New", monospace;
-            border: 1px solid #333;
+            font-size: 18px;
+            opacity: 0.9;
         }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00eaff;
+            border-left: 4px solid #00eaff;
+            padding-left: 10px;
+        }
+
+        /* Project Cards */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #151515;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 15px #00eaff60;
+        }
+
+        .project-card h3 {
+            margin: 0;
+            font-size: 22px;
+            color: #00eaff;
+        }
+
+        .project-card p {
+            margin-top: 12px;
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 16px;
+            background: #00eaff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00b6d4;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
+            margin-top: 40px;
+            font-size: 14px;
             color: #aaa;
         }
     </style>
 </head>
+
 <body>
+    <!-- Header -->
+    <header>
+        <h1>Ayush's Portfolio</h1>
+        <p>Projects | Electronics | Programming | Security Research</p>
+    </header>
 
-<header>
-    <h1>Ayush's Portfolio</h1>
-</header>
+    <div class="container">
+        
+        <!-- Projects Section -->
+        <h2 class="section-title">My Projects</h2>
 
-<div class="container">
+        <div class="projects">
 
-    <!-- Project 1 -->
-    <div class="project">
-        <h2>WiFi Deauthentication Attack (NodeMCU ESP8266)</h2>
-        <p>
-            This project demonstrates a WiFi Deauthentication attack using a NodeMCU ESP8266 module.
-            It sends deauth packets to disconnect devices from a selected WiFi network.
-        </p>
-        <p><strong>Technologies Used:</strong> ESP8266, Arduino IDE, C/C++, WiFi Protocols</p>
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <h3>WiFi Deauthentication Attack (NodeMCU ESP8266)</h3>
+                <p>
+                    This project uses the NodeMCU ESP8266 module to perform WiFi Deauthentication attacks.
+                    The device scans nearby WiFi networks, selects a target, and sends continuous
+                    deauth packets causing connected devices to disconnect.
+                    Built using Arduino IDE and ESP8266 libraries.
+                </p>
 
-        <div class="code-box">
-<pre>
-// Example ESP8266 Deauth code snippet (for display only)
-#include <ESP8266WiFi.h>
+                <a class="btn" target="_blank">View Code</a>
+            </div>
 
-void setup() {
-    WiFi.mode(WIFI_STA);
-    Serial.begin(115200);
-}
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <h3>Student Record Management System (C)</h3>
+                <p>
+                    A console-based C application that allows adding, deleting, editing,
+                    and searching student records. Fully menu-driven and file-handling based system.
+                </p>
 
-void loop() {
-    // Attack logic goes here
-}
-</pre>
+                <a class="btn" target="_blank">View Code</a>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <h3>Banking System in C (Console Based)</h3>
+                <p>
+                    A basic banking simulation built in C, supporting deposit, withdraw,
+                    balance inquiry, and transaction features using file storage.
+                </p>
+
+                <a class="btn" target="_blank">View Code</a>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="project-card">
+                <h3>Number Guessing Game (C Project)</h3>
+                <p>
+                    Fun mini-game written in C that generates a random number and lets the
+                    user guess it with hints like "Too High" or "Too Low".
+                </p>
+
+                <a class="btn" target="_blank">View Code</a>
+            </div>
+
         </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project">
-        <h2>C Programming Projects</h2>
-        <p>
-            A collection of small C programming projects created for learning and practice.
-        </p>
-        <p><strong>Projects Included:</strong></p>
-        <ul>
-            <li>Student Record Management System</li>
-            <li>Simple Calculator using Switch Case</li>
-            <li>Banking System (Console Based)</li>
-            <li>Number Guessing Game</li>
-        </ul>
-
-        <div class="code-box">
-<pre>
-// Example C Program Snippet
-#include <stdio.h>
-
-int main() {
-    printf("Hello from C Project!");
-    return 0;
-}
-</pre>
-        </div>
-    </div>
-
-</div>
-
-<footer>
-    © 2025 Ayush | All Rights Reserved
-</footer>
-
+    <footer>
+        © 2025 Ayush | All Rights Reserved
+    </footer>
 </body>
-  </html>
+</html>
