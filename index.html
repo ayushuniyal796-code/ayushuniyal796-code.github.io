@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1a1a1a;
+            padding: 25px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #00eaff;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .project {
+            background: #1c1c1c;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #222;
+        }
+        .project h2 {
+            margin-top: 0;
+            color: #00eaff;
+        }
+        .code-box {
+            background: #111;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            overflow-x: auto;
+            font-family: "Courier New", monospace;
+            border: 1px solid #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <h1>Ayush's Portfolio</h1>
+</header>
+
+<div class="container">
+
+    <!-- Project 1 -->
+    <div class="project">
+        <h2>WiFi Deauthentication Attack (NodeMCU ESP8266)</h2>
+        <p>
+            This project demonstrates a WiFi Deauthentication attack using a NodeMCU ESP8266 module.
+            It sends deauth packets to disconnect devices from a selected WiFi network.
+        </p>
+        <p><strong>Technologies Used:</strong> ESP8266, Arduino IDE, C/C++, WiFi Protocols</p>
+
+        <div class="code-box">
+<pre>
+// Example ESP8266 Deauth code snippet (for display only)
+#include <ESP8266WiFi.h>
+
+void setup() {
+    WiFi.mode(WIFI_STA);
+    Serial.begin(115200);
+}
+
+void loop() {
+    // Attack logic goes here
+}
+</pre>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+        <h2>C Programming Projects</h2>
+        <p>
+            A collection of small C programming projects created for learning and practice.
+        </p>
+        <p><strong>Projects Included:</strong></p>
+        <ul>
+            <li>Student Record Management System</li>
+            <li>Simple Calculator using Switch Case</li>
+            <li>Banking System (Console Based)</li>
+            <li>Number Guessing Game</li>
+        </ul>
+
+        <div class="code-box">
+<pre>
+// Example C Program Snippet
+#include <stdio.h>
+
+int main() {
+    printf("Hello from C Project!");
+    return 0;
+}
+</pre>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Ayush | All Rights Reserved
+</footer>
+
+</body>
+  </html>
